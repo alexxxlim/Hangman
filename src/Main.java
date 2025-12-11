@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.File;
 
 //Hangman - Main
 //точка исполнения
@@ -6,7 +7,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        mainMenu();
+    }
 
+
+    public static void mainMenu() {
         Scanner scanner = new Scanner(System.in);
         int selection = -1;
 
@@ -26,10 +31,15 @@ public class Main {
                     System.out.println("Выход из игры...");
                     break;
                 default:
-                    //TODO убрать 2x '\n', поменять на очистку консоли
-                    System.out.println("Вы ввели неверное число для выбора опции. Попробуйте еще раз...\n\n");
+                    System.out.println("Вы ввели неверное число для выбора опции. Попробуйте еще раз...\n\n\n");
                     break;
             }
         } while (selection != 0);
+    }
+
+    //TODO обработка не найденного файла!!!
+    public static String guessWord(File words) {
+        //TODO заглушка ретерна
+        return "";
     }
 }
